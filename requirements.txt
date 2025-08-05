@@ -1,0 +1,67 @@
+# 1. Functional Requirements
+# These define what the app should do:
+
+# Accept user input (email or SMS text).
+
+# Preprocess and transform the input text.
+
+# Load and use a trained ML model to classify as "Spam" or "Not Spam".
+
+# Display the prediction result with visual feedback.
+
+
+# 2. Technical Requirements
+# 🔹 Programming Language & Tools
+# Python 3.7+
+
+# Streamlit (for the web UI)
+
+# Scikit-learn (for ML model)
+
+# Pandas & NumPy (data handling)
+
+# NLTK or spaCy (for text preprocessing)
+
+# Pickle/Joblib (to load saved model/vectorizer)
+
+# 🔹 Required Python Libraries
+# Install via pip
+# - streamlit
+# - scikit-learn
+# - pandas
+# - numpy
+
+# If using TF-IDF or CountVectorizer:
+# pip install Pickle
+
+# 3. Machine Learning Components
+# You should already have:
+
+# i. A labeled dataset (spam vs. ham)
+
+# ii. Preprocessing pipeline (cleaning, tokenization, etc.)
+
+# iii. A trained model (e.g., Naive Bayes, Logistic Regression)
+
+# iv. A saved vectorizer (e.g., TfidfVectorizer) and model using pickle or joblib
+
+# Saving model & vectorizer
+import pickle
+
+with open('vectorizer.pkl', 'wb') as f:
+    pickle.dump(vectorizer, f)
+
+with open('model.pkl', 'wb') as f:
+    pickle.dump(model, f)
+
+
+🧪 4. Sample Folder Structure
+spam-detector-app/
+│
+├── spam_app.py               # Streamlit frontend
+├── Logistic_model.pkl        # Trained ML model
+├── cv_model.pkl              # Saved TfidfVectorizer
+├── requirements.txt          # List of packages
+├── spam Dectection.ipynb     # For preprocessing
+
+

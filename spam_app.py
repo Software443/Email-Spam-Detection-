@@ -18,7 +18,7 @@ with open(r'C:\Users\Hp\cv_model.pkl', 'rb') as file:
     vectorizer = pickle.load(file)
 
 # Sample input (ensure it's string)
-user_input = str(st.text_area("Enter email text here"))
+user_input = str(st.text_area("__Enter email text here__"))
 
 # Transform before prediction
 if st.button("Predict"):
@@ -33,3 +33,10 @@ if st.button("Predict"):
             st.success("✅ This is Not Spam.")
     else:
         st.warning("Please enter some text.")
+
+# Get the current date
+current_year = pd.to_datetime("today").year
+st.write(f"© {current_year} Spam Email Classification App")
+st.divider()
+# Display the current year in the footer
+st.markdown("_Made with ❤️ by Gabriel Simeon AKA Mr. Software_")

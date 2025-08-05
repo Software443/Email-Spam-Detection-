@@ -25,7 +25,4 @@ Built with [Streamlit](https://streamlit.io/) for a sleek interface, it allows u
 - **Pandas** – Data manipulation.
 - **NLTK** – Text preprocessing and tokenization.
 
----
-
-## 📂 Project Structure
 
